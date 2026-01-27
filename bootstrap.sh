@@ -2,13 +2,9 @@
 
 environment=$2
 component=$1
-#!/bin/bash
-
-# Install Ansible and Python dependencies
-dnf install -y ansible python3-pip
-pip3 install --upgrade pip
-pip3 install boto3 botocore
-
+dnf install ansible -y
+# dnf install python3-pip -y
+# pip3 install boto3 botocore amazon.aws
 
 REPO_URL=https://github.com/praveenapalla4-creator/ansible-roboshop-roles-tf.git
 REPO_DIR=/opt/roboshop/ansible
