@@ -2,9 +2,14 @@
 
 environment=$2
 component=$1
-dnf install ansible -y
-# dnf install python3-pip -y
-# pip3 install boto3 botocore amazon.aws
+
+dnf install ansible python3-pip -y
+
+# Install AWS SDKs for SSM lookup
+pip3 install boto3 botocore
+
+# Install Ansible AWS collection
+ansible-galaxy collection install amazon.aws
 
 REPO_URL=https://github.com/praveenapalla4-creator/ansible-roboshop-roles-tf.git
 REPO_DIR=/opt/roboshop/ansible
