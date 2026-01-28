@@ -3,7 +3,7 @@ variable "project_name" {
     default="roboshop"
 }
 variable "environment" {
-    type=string
+   
     default="dev"
 }
 
