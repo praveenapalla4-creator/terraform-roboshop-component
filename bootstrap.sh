@@ -3,6 +3,14 @@
 environment=$2
 component=$1
 
+
+LOG_FILE=/tmp/bootstrap-debug.log
+
+echo "Bootstrap started at $(date)" >> $LOG_FILE
+echo "Component received: $component" >> $LOG_FILE
+echo "Environment received: $environment" >> $LOG_FILE
+echo "----------------------------------" >> $LOG_FILE
+
 # dnf install ansible python3-pip -y
 
 # # Install AWS SDKs for SSM lookup
